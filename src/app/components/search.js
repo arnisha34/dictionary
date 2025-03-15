@@ -8,7 +8,10 @@ export const Search = () => {
 
   const searchTerm = (e) => {
     const searchWord = e.target.value
+    
     ctx.setWord(searchWord)
+
+
   }
 
   return(
