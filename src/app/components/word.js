@@ -24,7 +24,7 @@ export const Word = () => {
             <PlayCircleIcon className="text-sky-500"/>
           </button>
           <audio ref={audioRef} src={phonetic?.audio} type="audio/mpeg" />
-        </div> : <p>No audio found...</p>
+        </div> : <p>No definitions found...</p>
       }
     </div>
   )
