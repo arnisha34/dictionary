@@ -1,19 +1,31 @@
-import { useContext } from "react"
+import { useContext, useRef } from "react"
 import { Context } from "../utils/context"
+import { PlayCircleIcon } from "@heroicons/react/16/solid"
 
 
 export const Word = () => {
 
   const ctx = useContext(Context)
 
-  console.log(ctx.result)
+  const audioRef = useRef(null)
 
-  const phonetic = ctx.result.phonetics?.map(info => info.text)
+  const phonetic = ctx.wordData?.phonetics?.find(p => p.text&&p.audio)
 
   return(
     <div>
-      <h1 className="font-bold text-7xl">{ctx.result.word}</h1>
-      <p className="text-sky-500 text-2xl font-medium">{phonetic}</p>
+     {phonetic ?
+        <div className="flex justify-between">
+          <div>
+            <h1 className="font-bold text-6xl">{ctx.wordData?.word}</h1>
+            <p className="font-medium text-3xl text-sky-500 my-2">{phonetic.text}</p>
+          </div>
+          <button 
+            type="button" className="w-[80px] cursor-pointer" onClick={() => audioRef.current?.play()}>
+            <PlayCircleIcon className="text-sky-500"/>
+          </button>
+          <audio ref={audioRef} src={phonetic?.audio} type="audio/mpeg" />
+        </div> : <p>No audio found...</p>
+      }
     </div>
   )
 }

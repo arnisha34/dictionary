@@ -1,5 +1,5 @@
 export const fontNames = {
-  "Sans Serif": 'font-sans',
-  Serif: 'font-serif',
-  Monospace: 'font-mono'
+  "Sans Serif": 'font-[Inter]',
+  Serif: 'font-[Lora]',
+  Monospace: 'font-[Inconsolata]'
 }

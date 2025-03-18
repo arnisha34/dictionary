@@ -1,6 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@50..200,200..900&family=Inter:opsz,wght@14..32,100..900&family=Lora:ital,wght@1,400..700&display=swap');
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
 
 
 /*:root {
@@ -20,6 +20,10 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+.dark{
+  background: #000;
 }
 
 /*body {
