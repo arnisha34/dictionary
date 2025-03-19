@@ -4,6 +4,7 @@ import { Header } from './components/header'
 import { Search } from './components/search'
 import { Word } from './components/word'
 import { Meanings } from './components/meanings'
+import { Footer } from './components/footer'
 import { Context } from './utils/context'
 
 export default function Home() {
@@ -12,25 +13,25 @@ export default function Home() {
   const [isChecked, setIsChecked] = useState(false)
   const [wordData, setWordData] = useState(null)
   const [word, setWord] = useState('hello')
-  // const [meaning, setMeaning] = useState('')
 
   useEffect(() => {
     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
     .then(res => res.json())
-    .then(data => setWordData(data[0]))
+    .then(data => {
+      setWordData(data[0])
+    })
     .catch(error => console.error("Error fetching data:", error));
   },[word])
 
-  console.log(wordData)
-
   return (
     <Context.Provider value={{currFont, setCurrFont, isChecked, setIsChecked, wordData, setWordData, word, setWord}}>
-      <div className={`wrapper ${isChecked === true? "dark":""}`}>
+      <div id="wrapper" className={`${isChecked === true? "dark":""} min-h-screen dark:bg-slate-950 dark:text-white px-5 pb-20`}>
         <div className={`${currFont} max-w-3xl min-w-[320px] mx-auto pt-10`}>
           <Header />
           <Search />
           <Word />
           <Meanings />
+          <Footer />
         </div>
       </div>
     </Context.Provider>

@@ -20,7 +20,7 @@ export const Fonts = () => {
   return(
     <div id="fontOptions" className="text-md font-bold pr-5 self-center relative min-w-[175px]">
       <button type="button" id="current-font" className="flex justify-end items-center cursor-pointer capitalize border-r-gray-300 border-r-1 w-full pr-5" onClick={handleClick}><span>{fontName}</span><ChevronDownIcon className="w-4 ml-4 text-sky-600"/></button>
-      <ul className={`${isOpen===false?'hidden':''} transition-all transition-discrete duration-300 font-option flex flex-col gap-4 bg-white mt-3 pl-5 pr-10 py-5 rounded-2xl drop-shadow-lg cursor-pointer hover:sky-600 absolute`}>
+      <ul className={`${isOpen===false?'hidden':''} transition-all transition-discrete duration-300 font-option flex flex-col gap-4 bg-white mt-3 pl-5 pr-10 py-5 rounded-2xl drop-shadow-lg cursor-pointer hover:sky-600 absolute dark:bg-sky-950 dark:text-white`}>
       {listItems}
       </ul>
     </div>
