@@ -23,7 +23,7 @@ export const Word = () => {
         type="button" className="w-[80px] cursor-pointer" onClick={() => audioRef.current?.play()}>
         <PlayCircleIcon className="text-sky-300 hover:text-sky-500 dark:text-sky-800"/>
       </button>
-      <audio ref={audioRef} src={phonetic?.audio || null} type="audio/mpeg" /></>:null}
+      <audio ref={audioRef} src={phonetic?.audio || null} type="audio/mpeg" /></>:""}
     </div>
   )
 }

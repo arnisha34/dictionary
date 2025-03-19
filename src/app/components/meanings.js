@@ -20,14 +20,14 @@ export const Meanings = () => {
            <ul className="font-medium list-disc marker:text-sky-500 pl-10 text-lg">
             {def.definitions.map((d, i) => d.definition.length > 1 ? <li key={i} className="mt-[0.825em]">{d.definition}</li>: <p key={i}>{d.definition}</p>)}
            </ul>
-          </div>:null}
+          </div>:""}
           {def.synonyms.length?
           <div key={i+1} id="synonyms" className="flex my-10 items-center">
           <h5 className="font-medium text-xl text-gray-500">Synonyms</h5>
           <ul className="flex flex-wrap font-bold gap-x-4 pl-5 text-lg text-sky-500">
             {def?.synonyms?.map((s, i) => s.length > 1 ? <li key={i}>{s}</li>: <p key={i}>{s}</p>)}
            </ul>
-          </div>:null}
+          </div>:""}
         </section>
       )
     })
