@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react';
 import { Header } from './components/header'
 import { Search } from './components/search'
 import { Word } from './components/word'
-import { Meanings } from './components/meanings'
-import { Footer } from './components/footer'
 import { Context } from './utils/context'
 
 export default function Home() {
@@ -30,8 +28,6 @@ export default function Home() {
           <Header />
           <Search />
           <Word />
-          <Meanings />
-          <Footer />
         </div>
       </div>
     </Context.Provider>
