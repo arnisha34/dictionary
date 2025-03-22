@@ -8,9 +8,8 @@ import { Footer } from "./footer"
 export const Word = () => {
 
   const ctx = useContext(Context)
-
   const audioRef = useRef(null)
-
+  
   const phonetic = ctx.wordData?.phonetics?.find(p => p.text&&p.audio)
 
   return(

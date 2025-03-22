@@ -1,12 +1,15 @@
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline"
 import { Context } from "../utils/context"
 
 export const Search = () => {
 
   const ctx = useContext(Context)
-  const [query, setQuery] = useState(ctx.word); // Temporary state for input field
+  const [query, setQuery] = useState(localStorage.getItem('word')); // Temporary state for input field
 
+  useEffect(() => {
+    localStorage.setItem('word', query);
+}, [query]);
 
   const searchTerm = (e) => {
     setQuery(e.target.value)
