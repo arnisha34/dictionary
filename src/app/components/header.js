@@ -21,7 +21,7 @@ export const Header = () => {
           <div className="pr-5">
             <label className="cursor-pointer">
               <input type="checkbox" value="" id="toggle-mode" className="sr-only peer" checked={ctx.isChecked} onChange={handleCheck}/>
-              <span className="relative inline-block w-10 h-5 bg-gray-500 rounded-full dark:bg-gray-700 peer-checked:after:translate-x-full after:absolute after:top-[4px] after:start-[5px] after:end-[10px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-sky-500"></span>
+              <span className="relative inline-block w-10 h-5 bg-gray-500 rounded-full dark:bg-gray-700 peer-checked:after:translate-x-[18px] after:absolute after:top-[4px] after:start-[5px] after:bg-white after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-sky-500"></span>
             </label>
           </div>
           <div className="moon-icon self-start pt-1"><MoonIcon className="h-[1.5rem] text-gray-500 dark:text-sky-500"/></div>
